@@ -1,0 +1,150 @@
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+; 
+; See also the Calva Inspector: https://calva.io/inspector/
+
+PLEASE NOTE
+We will update the default location of this file.
+The new default location will be
+  "<projectRootPath>/.calva/repl.calva-repl"
+For now the legacy path is used by default.
+To give yourself a smooth transition, you can opt in
+to the change, by configuring this setting as false:
+  "calva.useLegacyReplWindowPath"
+and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
+
+
+This file is configured as the output destination for all REPL output.
+You can configure this with the setting:
+  "calva.outputDestinations"
+
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+jack-in; Starting Jack-in: (cd /opt/clojure-lab/clojure-playground; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:56679 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clojure-playground.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉clojure-playground.core꞉> 
+; Jack-in done.
+clj꞉clojure-playground.core꞉> 
+(foo)
+nil
+clj꞉clojure-playground.core꞉> 
+(foo)
+nil
+clj꞉clojure-playground.core꞉> 
+(foo2)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:57:1).
+; Unable to resolve symbol: foo2 in this context
+clj꞉clojure-playground.core꞉> 
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///opt/clojure-lab/clojure-playground/.nrepl-port ...
+; Using host:port localhost:56679 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clojure-playground.core꞉> 
+(foo2)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:74:1).
+; Unable to resolve symbol: foo2 in this context
+clj꞉clojure-playground.core꞉> 
+clojure-playground.core (reload)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:78:25).
+; Unable to resolve symbol: reload in this context
+clj꞉clojure-playground.core꞉> 
+clojure-playground.core reload
+; Syntax error compiling at (.calva/output-window/output.calva-repl:1:8665).
+; Unable to resolve symbol: reload in this context
+clj꞉clojure-playground.core꞉> 
+; Fool
+; Syntax error reading source at (REPL:14:20).
+; Unmatched delimiter: )
+clj꞉clojure-playground.core꞉> 
+#'clojure-playground.core/foo2
+clj꞉clojure-playground.core꞉> 
+; Fool
+; Syntax error reading source at (REPL:14:20).
+; Unmatched delimiter: )
+clj꞉clojure-playground.core꞉> 
+#'clojure-playground.core/foo2
+clj꞉clojure-playground.core꞉> 
+(foo2)
+; Fool
+nil
+clj꞉clojure-playground.core꞉> 
+foo)
+(foo)
+; Fool
+nil
+clj꞉clojure-playground.core꞉> 
+(foo)
+; Fool
+nil
+clj꞉clojure-playground.core꞉> 
+#'clojure-playground.core/foo2
+clj꞉clojure-playground.core꞉> 
+(foo2)
+; Fool
+nil
+clj꞉clojure-playground.core꞉> 
+#'clojure-playground.core/foo
+clj꞉clojure-playground.core꞉> 
+(foo)
+; Fool 2
+nil
+clj꞉clojure-playground.core꞉> 
+(foo)
+; Fool 2
+nil
+clj꞉clojure-playground.core꞉> 
+#'clojure-playground.core/foo2
+clj꞉clojure-playground.core꞉> 
+(foo)
+; Fool 3
+nil
+clj꞉clojure-playground.core꞉> 
+#'clojure-playground.core/foo2
+clj꞉clojure-playground.core꞉> 
+(defun)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:135:1).
+; Unable to resolve symbol: defun in this context
+clj꞉clojure-playground.core꞉> 
+; Execution error (FileNotFoundException) at clojure-playground.core/eval10652$loading (form-init2504733525071107411.clj:1).
+; Could not locate as__init.class, as.clj or as.cljc on classpath.
+; 
+; Syntax error compiling at (src/clojure_playground/core.clj:13:1).
+; No such namespace: logic
+clj꞉clojure-playground.core꞉> 
+; Execution error (FileNotFoundException) at clojure-playground.core/eval10660$loading (form-init2504733525071107411.clj:1).
+; Could not locate as__init.class, as.clj or as.cljc on classpath.
+; 
+; Syntax error compiling at (src/clojure_playground/core.clj:13:1).
+; No such namespace: logic
+clj꞉clojure-playground.core꞉> 
