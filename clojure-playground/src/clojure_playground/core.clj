@@ -1,5 +1,5 @@
 (ns clojure-playground.core
-  (:require clojure-playground.logic as logic)
+  (:require [clojure-playground.logic :as logic])
   (:gen-class))
 
 (defn -main
@@ -11,5 +11,5 @@
   (println "Fool 3"))
 
 (defn foo2 []
-  logic/foo)
+  (logic/foo))
 

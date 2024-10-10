@@ -7,4 +7,4 @@
   (println "Hello, World!"))
 
 (defn foo []
-  (println "Fool"))
+  (println "Fool logic"))
